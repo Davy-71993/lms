@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client"
 
-import supabase from "@/lib/supabase"
 import { Enrolment, Module } from "@/lib/types"
 import Link from "next/link"
 import { useParams, usePathname } from "next/navigation"
@@ -61,13 +60,13 @@ export default function Player({ module, enrolment }: PlayerProps) {
 
   useEffect(()=>{
     if(!progress || progress <= enrolment.progress) return
-    return ()=>{
-      supabase.from("enrolments")
-      .update({progress})
-      .eq("courseID", courseID)
-      .eq("studentID", "1")
-      .then((data)=>{ console.log(data) })
-    }
+    
+    // supabase.from("enrolments")
+    // .update({progress})
+    // .eq("courseID", courseID)
+    // .eq("studentID", "1")
+    // .then((data)=>{ console.log(data) })
+    
   }, [courseID, progress, enrolment])
 
   const replay = () => {

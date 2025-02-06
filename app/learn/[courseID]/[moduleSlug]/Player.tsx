@@ -79,7 +79,7 @@ export default function Player({ module, enrolment }: PlayerProps) {
   }
 
   return (
-    <div className="w-full h-full max-w-4xl mx-auto rounded-lg text-sky-900 flex relative overflow-hidden ">
+    <div className="w-full min-h-screen max-w-4xl mx-auto rounded-lg text-sky-900 flex relative overflow-hidden ">
       <figure id="video" className={`w-full flex flex-col transition-all delay-500 absolute top-0 ${ ended ? "-left-10 opacity-0": "left-0 opacity-100"} `}>
             <video 
               ref={videoRef}
@@ -112,12 +112,11 @@ export default function Player({ module, enrolment }: PlayerProps) {
             </div>
             
       </figure>
-      <div className={`w-full mt-20 absolute transition-all delay-500 text-sky-100 bg-sky-900 p-5 rounded-lg ${ended ? "right-0 opacity-100" : "-right-full opacity-0"}`}>
+      <div className={`w-full absolute transition-all delay-500 text-sky-100 bg-sky-900 p-5 rounded-lg ${ended ? "right-0 opacity-100" : "-right-full opacity-0"}`}>
         <p className="text-center text-2xl font-[700] w-full max-w-xl mx-auto my-10">{ module.afterText}</p>
-        <div className="w-full max-w-xl mx-auto p-5 flex gap-10">
+        <div className="w-full max-w-xl mx-auto p-5 flex flex-col gap-5 sm:flex-row sm:gap-10">
           <button onClick={replay} className="w-full rounded-full px-5 py-2 text-2xl transition-colors bg-teal-500 hover:bg-teal-400">Replay</button>
-         
-            <Link href={`${pathName}/quiz`} className="w-full rounded-full px-5 py-2 text-2xl transition-colors bg-purple-500 text-center hover:bg-purple-400">{module.questions && module.questions.length > 0 ? "Take a quiz" : "Next module"}</Link>
+          <Link href={`${pathName}/quiz`} className="w-full rounded-full px-5 py-2 text-2xl transition-colors bg-purple-500 text-center hover:bg-purple-400">{module.questions && module.questions.length > 0 ? "Take a quiz" : "Next module"}</Link>
         </div>
       </div>
     </div>

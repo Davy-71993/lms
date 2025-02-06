@@ -19,3 +19,15 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@starting-styles{
+  .board{
+    @apply scale-50 bg-transparent
+  }
+}
+
+.board{
+  @apply scale-100 bg-sky-900 transition-all duration-500
+
+}

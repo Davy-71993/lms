@@ -34,10 +34,10 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="w-full p-5 shadow-lg text-sky-900">
+        <nav className="w-full px-5 py-1 shadow-lg text-sky-900">
             <div className="w-full max-w-6xl mx-auto flex justify-between gap-5">
-                <Link href="/"><h1 className="text-2xl font-bold">LMS</h1></Link>
-                <h1 className="sm:text-2xl sm:font-bold">{user.username}</h1>
+                <Link href="/"><h1 className="text-xl font-bold">Martian E-learning Management System</h1></Link>
+                <h1 className="sm:text-xl sm:font-bold">{user.username}</h1>
             </div>
         </nav>
         {children}

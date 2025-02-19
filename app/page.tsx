@@ -8,7 +8,7 @@ export default async function Home() {
 
   const handleFormSubmission = async() => {
     "use server"
-    // Login login goes here
+    // Login login goes here: Jst hard coded user cookie.
     const cookieHandler = await cookies()
     cookieHandler.set("user", JSON.stringify({id: "EDS5TG", username: "Cole Palmar"}))
     redirect("/learn")

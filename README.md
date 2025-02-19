@@ -21,7 +21,7 @@ npm install
 ## Finaly run the app
 
 ```bash
-mpn run dev
+npm run dev
 
 ```
 
